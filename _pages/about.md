@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm Dhruv, a computer science undergrad who was born and brought up in Mumbai, India. Currently I'm studying at Manipal Institute of Technology.
+I'm Dhruv, a computer science undergrad who was born and brought up in Mumbai, India. Currently I'm studying at Manipal Institute of Technology. Here's my (slightly outdated) [Résumé](https://demoAccount0205.github.io/Resume.pdf).
 
 I'm part of my University's [AI Robotics Team](http://projectmanas.in) where I'm the Head of AI. I spend my evenings at the workshop(Project MANAS) where i work alongside a team of 50+ members from different disciplines on developing our Autonomous car EVE and various other projects. I've interned at [Active.ai](https://active.ai/) as a machine learning intern where I got to work with basic NLP on differnt tasks.
 

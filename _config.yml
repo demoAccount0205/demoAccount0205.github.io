@@ -11,9 +11,9 @@ title                    : "Dhruv Joshi / demoAccount0205.github.io"
 title_separator          : "-"
 name                     : &name "Dhruv Joshi"
 description              : &description "CS Undergrad"
-url                      : https://demoAccount0207.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://demoAccount0205.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "demoAccount0207/demoAccount0205.github.io"
+repository               : "demoAccount0205/demoAccount0205.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160

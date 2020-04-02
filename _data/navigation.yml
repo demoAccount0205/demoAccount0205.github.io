@@ -7,7 +7,9 @@ main:
   #   url: /talks/    
 
   # - title: "Teaching"
-  #   url: /teaching/    
+  #   url: /teaching/
+  - title: "Resources"
+    url: /demo/    
     
   - title: "Blog Posts"
     url: /year-archive/

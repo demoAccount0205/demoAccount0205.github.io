@@ -23,17 +23,19 @@ This post assumes basic knowledge of policy gradient methods, a refresher on thi
 The gradient in the policy gradient algorithm is <br />
 $$\nabla_{\theta} J(\theta) \approx \sum_{i}[\sum_{t} \nabla_{\theta} log(\pi_{\theta}(s_{t}^{i} , a_{t}^{i}))G_{t}^{i}]$$
 
-$$\theta \larr \theta + \alpha \nabla_{\theta} J(\theta)$$
+$$\theta = \theta + \alpha \nabla_{\theta} J(\theta)$$
 
-$$\theta \larr \theta + \alpha \nabla_{\theta} J(\theta)$$
+$$\theta = \theta + \alpha \nabla_{\theta} J(\theta)$$
 
-$$\theta \larr \theta + \alpha g$$
-
+$$\theta = \theta + \alpha g$$
+<br />
 where $g$ is the gradient. Here we're taking the first order derivative which assumes that the surface of our function is relatively flat when in fact it could be highly curved. A large step on a highly curved surface could lead to a drastically different policy which is extremely bad during training, meanwhile if we take too small a step our network will take too long to converge. <br />
 
-For example, if our old policy is taking a path that is too close to the edge of a cliff, a large step during gradient ascent could lead to a new policy that veers off the cliff. The performance collapses and it will take a long time to recover if ever.  <br />
+For example, if our old policy is taking a path that is too close to the edge of a cliff, a large step during gradient ascent could lead to a new policy that veers off the cliff. The performance collapses and it will take a long time to recover if ever.
+<br />
 
-We should constraint the policy change every iteration. In regular gradient descent the magnitude of the gradient x $\alpha$ decides our step size. It can be seen as taking a step of length $\alpha |g|$ from our current parameters which would be a circle where the length of the step is equal to the radius of the circle. The direction in which we move is given by the gradient. Thus we're imposing a constraint in parameter space to select a set of parameters that are within this circle, when instead we should be imposing a constraint in the distribution space. We can do this by applying a constraint on the KL divergence between our new policy and our current policy.
+We should constraint the policy change every iteration. In regular gradient descent the magnitude of the gradient x $\alpha$ decides our step size. It can be seen as taking a step of length $\alpha$|g| from our current parameters which would be a circle where the length of the step is equal to the radius of the circle. The direction in which we move is given by the gradient. Thus we're imposing a constraint in parameter space to select a set of parameters that are within this circle, when instead we should be imposing a constraint in the distribution space. We can do this by applying a constraint on the KL divergence between our new policy and our current policy.
+<br />
 
 ### Minorize-Maximization MM algorithm
 The MM algorithm constructs a lower bound for our expected reward at each iteration and then proceeds to maximise this lower bound with respect to $\theta$. We do this iteratively until we converge to the optimal policy. In TRPO we will construct a lower bound which we'll call the surrogate advantage/function and then optimise our parameters w.r.t it.
